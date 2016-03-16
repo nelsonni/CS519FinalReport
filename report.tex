@@ -210,9 +210,21 @@ To answer our research questions, we conducted semi-structured interviews, where
 \end{tabular}
 \end{table}
 
-We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table **Participants. Participant roles in the software development process varied. For instance, one participant (**pX) was a founding member of a startup who managed the development team, while another participant (**pX) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
-
-Our semi-structured interviews took place in person in a conference room at an engineering center. The exception was **pNuggets, who was interviewed at their place of work. Interviews lasted an average of 30 minutes, with a minimum of 8 minutes. All interviews were audio recorded with permission from participants.  Interviews began with demographic questions: participant development experience, and experience with continuous integration. We also asked a thematic question:
+We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table **Participants. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
+\begin{table}
+\centering
+\caption{Participant Information}
+\begin{tabular}{ | p{.2\columnwidth} | p{.2\columnwidth} | p{.2\columnwidth} | p{.2\columnwidth} | }\hline
+	Participant number & Development experience & continuous integration experience & position \\ \hline
+	\michael & 1 & 1 & 1 \\ \hline
+	\sruti & 2 & 2 & 2 \\ \hline
+	\caius & 3 & 3 & 3 \\ \hline
+	\srutitwo & 4 & 4 & 4 \\ \hline
+	\david & 5 & 5 & 5 \\ \hline
+	\cpg & 6 & 6 & 6 \\ \hline
+\end{tabular}
+\end{table}
+Our semi-structured interviews took place in person in a conference room at an engineering center. The exception was \cpg, who was interviewed at their place of work. Interviews lasted an average of 30 minutes, with a minimum of 8 minutes. All interviews were audio recorded with permission from participants.  Interviews began with demographic questions: participant development experience, and experience with continuous integration. We also asked a thematic question:
 
 \smallskip
 \textit{"Tell me about the last time you used continuous integration"}
@@ -234,16 +246,33 @@ After transcribing the interviews, we analyzed them by using a code set based on
 \subsection{RQ3: Does Continuous Integration alter programmer's frame of reference when sensemaking?}
 Our last research question is about the programmer's frame of reference when sensemaking. According to Pirolli's model, sensemaking occurs at all of the levels of the sensemaking chart. We want to understand whether or not participants framed their sensemaking as something \textit{they} were doing, or if they found that their continuous integration solution helped them perform their sensemaking.
 
-When participants responded to questions, they often referred to the project they were working on. When coding, if participants referred to an artifact of the project, we called that an external data source. For instance, **Sruti2 said of commit messages: 
+When participants responded to questions, they often referred to the project they were working on. When coding, if participants referred to an artifact of the project, we called that an external data source. For instance, \srutitwo  said of commit messages: 
 
-\textit{" the commit messages have been  useful."}
+\begin{quote}
+"The commit messages have been  useful."
+\end{quote}
 
-If, however, the participant referred to an action relating to the artifact, we coded that as shoeboxing. For instance, when asked when she interacted with the continuous integration solution, **Sruti2 responded: 
 
-\textit{"every time I commit"}
+If, however, the participant referred to an action relating to the artifact, we coded that as shoeboxing. For instance, when asked when she interacted with the continuous integration solution, \srutitwo responded: 
 
-We found that when talking about EDS, Shoebox, participants were talking about things that they did (e.g., committing, changing code). But when referring to schemas and evidence files, they were talking about things the CI tool did(e.g.,Integration testing, build reports, dashboards, etc.
-)This allowed participants to skip or reduce the amount of time they spent in these sensemaking steps. 
+\begin{quote}
+"Every time I commit."	
+\end{quote}
+
+
+We found that when talking about external data sources  or their shoebox, participants were talking about things that \textit{they} did (e.g., committing, changing code). This indicated to us that the participants felt that they had to make sense of the development cycle when they were doing these tasks. 
+
+However, we found that when referring to schemas and evidence files, participants were referring to things the CI tool did for them (e.g.,Integration testing, build reports, dashboards, etc.
+) 
+
+From these observations, we speculate that participants limited their frame of reference while sensemaking to everyday development activities, e.g. coding. This might be because the continuous integration cycle focuses on small, rapid releases rather than larger, feature-based releases. for instance, \cpg stated:
+
+\begin{quote}
+"There's really no huge formal 'we're doing a release.' We are releasing every single day. Sometimes little things, sometimes big things."	
+\end{quote}
+
+
+This smaller release cycle allowed participants to skip or reduce the amount of time they spent in the sensemaking steps of evidence file and schema. 
 
 \section{Discussion}
 \section{Conclusion}
