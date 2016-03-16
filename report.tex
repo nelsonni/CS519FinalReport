@@ -181,7 +181,20 @@ Continuous Integration is a software development practice where members of a tea
 
 \section{Background and Related Work}
 \section{Methodology}
-To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant. 
+To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant. \\
+
+\begin{table}[b]
+\begin{tabular}[b]{ | l | l | l | l | }
+	\hline
+	Code & Code Name & Description & Rules / Examples \\ \hline
+	EDS & External Data Sources & Raw evidence in mostly standard consumable formats (text). & Existing external artifacts associated with software development (i.e. source code, test suites, databases, raw data, servers, etc.) \\ \hline
+	SHOE & Shoebox & Much smaller subset of that external data that is relevant for processing. & Modifications to source code or testing artifacts (i.e. commits, changesets, updates) \\ \hline
+	EVID & Evidence File & Snippets extracted from items in the shoebox. & Integration, compilation, and building actions related to modification and changes \\ \hline
+	SCHM & Schema & Re-representation or organized marshalling of the information so that it can be used more easily to draw conclusions. & Results of integration, compilation, building, and updating (i.e. build reports, metrics, status dashboards, etc.) \\ \hline
+	HYPO & Hypothesis & Tentative representation of those conclusions with supporting arguments. & Assumptions regarding integration, compilation, and builds, or conclusions drawn from the results of such actions \\ \hline
+	PRES & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
+\end{tabular}
+\end{table}
 
 We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table **Participants. Participant roles in the software development process varied. For instance, one participant (**pX) was a founding member of a startup who managed the development team, while another participant (**pX) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 
@@ -200,22 +213,24 @@ For the rest of the interview, participants referred back to that experience wit
 \subsection{Analysis}
 After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in table **codeset. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned EDS twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
 
-\begin{tabular}{ | l | l | l | l | }
-	\hline
-	Code & Code Name & Description & Rules / Examples \\ \hline
-	EDS & External Data Sources & Raw evidence in mostly standard consumable formats (text). & Existing external artifacts associated with software development (i.e. source code, test suites, databases, raw data, servers, etc.) \\ \hline
-	SHOE & Shoebox & Much smaller subset of that external data that is relevant for processing. & Modifications to source code or testing artifacts (i.e. commits, changesets, updates) \\ \hline
-	EVID & Evidence File & Snippets extracted from items in the shoebox. & Integration, compilation, and building actions related to modification and changes \\ \hline
-	SCHM & Schema & Re-representation or organized marshalling of the information so that it can be used more easily to draw conclusions. & Results of integration, compilation, building, and updating (i.e. build reports, metrics, status dashboards, etc.) \\ \hline
-	HYPO & Hypothesis & Tentative representation of those conclusions with supporting arguments. & Assumptions regarding integration, compilation, and builds, or conclusions drawn from the results of such actions \\ \hline
-	PRES & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
-\end{tabular}
-
-
-
-
-
 \section{Results}
+
+\subsection{RQ1:  Does Pirolli's Sensemaking Model apply to Continuous Integration?}
+\subsection{RQ2: Does Continuous Integration alter the programmer's sensemaking behavior?}
+\subsection{RQ3: Does Continuous Integration alter programmer's frame of reference when sensemaking?}
+Our last research question is about the programmer's frame of reference when sensemaking. According to Pirolli's model, sensemaking occurs at all of the levels of the sensemaking chart. We want to understand whether or not participants framed their sensemaking as something \textit{they} were doing, or if they found that their continuous integration solution helped them perform their sensemaking.
+
+When participants responded to questions, they often referred to the project they were working on. When coding, if participants referred to an artifact of the project, we called that an external data source. For instance, **Sruti2 said of commit messages: 
+
+\textit{" the commit messages have been  useful."}
+
+If, however, the participant referred to an action relating to the artifact, we coded that as shoeboxing. For instance, when asked when she interacted with the continuous integration solution, **Sruti2 responded: 
+
+\textit{"every time I commit"}
+
+We found that when talking about EDS, Shoebox, participants were talking about things that they did (e.g., committing, changing code). But when referring to schemas and evidence files, they were talking about things the CI tool did(e.g.,Integration testing, build reports, dashboards, etc.
+)This allowed participants to skip or reduce the amount of time they spent in these sensemaking steps. 
+
 \section{Discussion}
 \section{Conclusion}
 
