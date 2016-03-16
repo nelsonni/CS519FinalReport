@@ -45,8 +45,7 @@
 %
 % For tracking purposes - this is V2.0 - May 2012
 
-\documentclass{sig-alternate-05-2015}
-
+\documentclass{sig-alternate}
 
 \begin{document}
 
@@ -185,10 +184,9 @@ Charles Hill\\
 \keywords{Continuous Integration; Sensemaking; Human-Computer Interactions; Software Engineering}
 
 \section{Introduction}
-Continous Integration describes a set of software engineering practices that speed up the delivery of software by automating the integration and build steps of the software development cycle. It emerged in the Extreme Programming (XP) community, with Kent Beck and Ron Jeffries writing about agile development models and continuous integration while on the Chrysler Comprehensive Compensation System project in 1998 \cite{beck:extreme_programming}\cite{beck:agile_manifesto}.
+Continous Integration describes a set of software engineering practices that speed up the delivery of software by automating the integration and build steps of the software development cycle. It emerged in the Extreme Programming (XP) community, with Kent Beck and Ron Jeffries writing about agile development models and continuous integration while on the Chrysler Comprehensive Compensation System project in 1998 \cite{beck:extreme_programming} \cite{beck:agile_manifesto}.
 
 Martin Fowler further described the concept of continuous integration in 2006, by defining \textit{continuous integration} as:
-
 \begin{quote}
 Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily -- leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly. \cite{fowler:continuous}
 \end{quote}
@@ -197,10 +195,13 @@ Continuous Integration is a software development practice where members of a tea
 \section{Methodology}
 To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant. \\
 
-\begin{table}[b]
-\begin{tabular}[b]{ | l | l | l | l | }
+\begin{table*}
+\label{table:codeset}
+\centering
+\caption{Codeset}
+\begin{tabular}[b]{ | l | l | p{5.5cm} | p{6.5cm} | }
 	\hline
-	Code & Code Name & Description & Rules / Examples \\ \hline
+	\rowcolor{black!20!} Code & Code Name & Description & Rules / Examples \\ \hline
 	EDS & External Data Sources & Raw evidence in mostly standard consumable formats (text). & Existing external artifacts associated with software development (i.e. source code, test suites, databases, raw data, servers, etc.) \\ \hline
 	SHOE & Shoebox & Much smaller subset of that external data that is relevant for processing. & Modifications to source code or testing artifacts (i.e. commits, changesets, updates) \\ \hline
 	EVID & Evidence File & Snippets extracted from items in the shoebox. & Integration, compilation, and building actions related to modification and changes \\ \hline
@@ -208,7 +209,7 @@ To answer our research questions, we conducted semi-structured interviews, where
 	HYPO & Hypothesis & Tentative representation of those conclusions with supporting arguments. & Assumptions regarding integration, compilation, and builds, or conclusions drawn from the results of such actions \\ \hline
 	PRES & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
 \end{tabular}
-\end{table}
+\end{table*}
 
 We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table **Participants. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 \begin{table}
@@ -237,7 +238,7 @@ For the rest of the interview, participants referred back to that experience wit
 	\item What types of information from your CI solution do you find relevant to you? 
 \end{itemize}
 \subsection{Analysis}
-After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in table **codeset. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned EDS twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
+After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in Table \ref{table:codeset}. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned EDS twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
 
 \section{Results}
 
