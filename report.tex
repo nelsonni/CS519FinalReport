@@ -218,9 +218,10 @@ To answer our research questions, we conducted semi-structured interviews, where
 \end{tabular}
 \end{table*}
 
-We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table **Participants. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
+We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table \ref{table:participant}. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 \begin{table}
 \centering
+\label{table:participant}
 \caption{Participant Information}
 \begin{tabular}{ | p{.2\columnwidth} | p{.2\columnwidth} | p{.2\columnwidth} | p{.2\columnwidth} | }\hline
 	Participant number & Development experience & continuous integration experience & position \\ \hline
@@ -251,6 +252,27 @@ After transcribing the interviews, we analyzed them by using a code set based on
 
 \subsection{RQ1:  Does Pirolli's Sensemaking Model apply to Continuous Integration?}
 \subsection{RQ2: Does Continuous Integration alter the programmer's sensemaking behavior?}
+To answer this question, we coded participant interviews as described in methodology. Table \ref{table:coderesults} details our results. 
+\begin{table}
+\centering
+\caption{Code Results}
+\label{table:coderesults}
+\begin{tabular}{ | p{.25\columnwidth} | l | l | l | l | l | l | l | }
+	\hline
+	& P1 & P2 & P3 & P4 & P5 & P6 & Total \\ \hline
+	EDS & 4 & 12 & 12 & 14 & 12 & 8 & 72 \\ \hline
+	SHOE & 3 & 5 & 10 & 10 & 19 & 2 & 59 \\ \hline
+	EVID & 0 & 6 & 11 & 17 & 13 & 11 & 67 \\ \hline
+	SCHM & 4 & 15 & 17 & 13 & 22 & 18 & 90 \\ \hline
+	HYPO & 2 & 0 & 2 & 4 & 7 & 7 & 27 \\ \hline
+	PRES & 0 & 0 & 0 & 0 & 1 & 4 & 5 \\ \hline
+	NULL & 8 & 20 & 26 & 30 & 41 & 37 & 255 \\ \hline
+	Total per Participant & 21 & 58 & 78 & 88 & 115 & 87 &  \\ \hline
+\end{tabular}
+\end{table}
+
+We found that participants didn't refer to hypotheses and presentation nearly as much as they referred to external data sources, shoeboxing, evidence files, and schema. We interpret this result to mean that participants spend less time hypothesizing about their project or thinking about presentation because of continuous integration. The tools that continuous integration uses influenced the way that participants described their work.
+
 \subsection{RQ3: Does Continuous Integration alter programmer's frame of reference when sensemaking?}
 Our last research question is about the programmer's frame of reference when sensemaking. According to Pirolli's model, sensemaking occurs at all of the levels of the sensemaking chart. We want to understand whether or not participants framed their sensemaking as something \textit{they} were doing, or if they found that their continuous integration solution helped them perform their sensemaking.
 
@@ -283,45 +305,21 @@ From these observations, we speculate that participants limited their frame of r
 This smaller release cycle allowed participants to skip or reduce the amount of time they spent in the sensemaking steps of evidence file and schema. 
 
 \section{Discussion}
+\subsection{Threats to Validity}
+Our study has some threats to validity that need to be addressed. First is our sample size: we only had 6 participants, and they may not be representative of continuous integration users in general. Beyond that, our participants may have had recollection bias: it's possible that during the interview, participants were more likely to recall information that had to do with their day-to-day work, such as programming, and less likely to remember their hypotheses and final product. This could influence the proportion of codes we found in the interviews. Finally, participants may have exhibited bias for or against continuous integration based on factors outside their sensemaking process, such as work environment or project workload.
+\subsection{Future Work}
+There is little literature being published about continuous integration and its effects on the development cycle. Future work could flesh out our modified model of sensemaking by performing observational studies on people interacting with continuous integration tools. 
+
+Further work could also be done by applying Information Foraging Theory to try to understand the effects of continuous integration tools on developers' foraging habits. 
+
+Finally, while our work explores how continuous integration affects sensemaking, we've only done preliminary work. We don't answer questions such as "why does continuous integration affect sensemaking," and we don't address whether or not these effects are beneficial or harmful to users. 
 \section{Conclusion}
-
-\subsection{Type Changes and {\subsecit Special} Characters}
-We have already seen several typeface changes in this sample.  You
-can indicate italicized words or phrases in your text with
-the command \texttt{{\char'134}textit}; emboldening with the
-command \texttt{{\char'134}textbf}
-and typewriter-style (for instance, for computer code) with
-\texttt{{\char'134}texttt}.  But remember, you do not
-have to indicate typestyle changes when such changes are
-part of the \textit{structural} elements of your
-article; for instance, the heading of this subsection will
-be in a sans serif\footnote{A third footnote, here.
-Let's make this a rather short one to
-see how it looks.} typeface, but that is handled by the
-document class file. Take care with the use
-of\footnote{A fourth, and last, footnote.}
-the curly braces in typeface changes; they mark
-the beginning and end of
-the text that is to be in the different typeface.
-
-You can use whatever symbols, accented characters, or
-non-English characters you need anywhere in your document;
-you can find a complete list of what is
-available in the \textit{\LaTeX\
-User's Guide} cite Lamport:LaTeX.
-
-\begin{table}
-\centering
-\caption{Frequency of Special Characters}
-\begin{tabular}{|c|c|l|} \hline
-Non-English or Math&Frequency&Comments\\ \hline
-\O & 1 in 1,000& For Swedish names\\ \hline
-$\pi$ & 1 in 5& Common in math\\ \hline
-\$ & 4 in 5 & Used in business\\ \hline
-$\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
-\hline\end{tabular}
-\end{table}
-
+This study is the first that considers continuous integration through the lens of sensemaking. We interviewed 6 software developers about their experience with continuous integration. Results indicate that there are key elements of the sensemaking process that continuous integration affects. Our key results were:
+\begin{itemize}  
+	\item \textit{Modifying Pirolli and Card's notional model of sensemaking:} We found some differences in the way that developers make sense of the development cycle when using continuous integration. This prompted us to modify Pirolli and Card's model to fit our participants' experiences.
+	\item \textit{Continuous Integration tools change participant behavior during sensemaking:} Participants referred to their hypotheses and presentation steps of sensemaking much less often than they referred to external data sources, shoebox, evidence file, and schema. We thing that continuous integration tools cause participants to spend less time hypothesizing about and presenting their work. 
+	\item \textit{An altered frame of reference:} Continuous integration tools seemed to take over part of participants' sensemaking process, specifically by providing them evidence files and schemas by which to refer to their development projects.
+\end{itemize}
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
