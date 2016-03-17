@@ -136,12 +136,12 @@ Charles Hill\\
 % number that will appear in the \additionalauthors section.
 
 % shortcut macros for Study Participants
-\newcommand{\michael}{P1}
-\newcommand{\sruti}{P2}
-\newcommand{\caius}{P3}
-\newcommand{\srutitwo}{P4}
-\newcommand{\david}{P5}
-\newcommand{\cpg}{P6}
+\newcommand{\michael}{P1 }
+\newcommand{\sruti}{P2 }
+\newcommand{\caius}{P3 }
+\newcommand{\srutitwo}{P4 }
+\newcommand{\david}{P5 }
+\newcommand{\cpg}{P6 }
 
 \maketitle
 \begin{abstract}
@@ -187,10 +187,9 @@ We present modifications to the sensemaking model that better reflect developers
 \keywords{Continuous Integration; Sensemaking; Human-Computer Interactions; Software Engineering}
 
 \section{Introduction}
-Agile development has largely replaced the waterfall method as the development cycle of choice for many companies. Continuous integration is an optional part of agile development, currently practiced by many large companies such as Facebook, Google, Netflix, and LinkedIn.
+Agile development models have replaced traditional development models (such as Waterfall Method) in a significant portion of the professional software development industry. Continuous integration is an optional part of agile development, currently practiced by many large companies such as Facebook, Google, Netflix, and LinkedIn.
 
 Continous Integration describes a set of software engineering practices that speed up the delivery of software by automating the integration and build steps of the software development cycle. It emerged in the Extreme Programming (XP) community, with Kent Beck and Ron Jeffries writing about agile development models and continuous integration while on the Chrysler Comprehensive Compensation System project in 1998\cite{beck:extreme_programming}\cite{beck:agile_manifesto}.
-
 
 Martin Fowler further described the concept of continuous integration in 2006, by defining \textit{continuous integration} as:
 \begin{quote}
@@ -213,14 +212,13 @@ This study is an attempt to learn more about software developers' sensemaking as
 \item Does Continuous Integration alter programmers' sensemaking behavior?
 \item Does Continuous Integration alter programmers' frame of reference when sensemaking?
 \end{itemize}
-
 %%%%%%
 
 \section{Background and Related Work}
 
 the usage of continuous integration has primarily focused upon the operational aspects of continuous integration as it relates to software development processes \cite{miller:hundreddays}\cite{olsson:climbingstairway}.
 
-\section{Methodology}
+\section{Methodology} \label{method}
 
 \begin{table}[b]
 	\centering
@@ -256,6 +254,21 @@ To answer our research questions, we conducted semi-structured interviews, where
 
 We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table \ref{table:participant}. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 
+\begin{table}
+\centering
+\label{table:participant}
+\caption{Participant Information}
+\begin{tabular}{ | >{\centering\arraybackslash}p{.25\columnwidth} | >{\centering\arraybackslash}p{.25\columnwidth} | >{\centering\arraybackslash}p{.25\columnwidth} | }\hline
+	\rowcolor{black!20!}Participant number & Development experience & Continuous Integration Experience \\ \hline
+	\michael & 1 & 1 \\ \hline
+	\sruti & 2 & 2 \\ \hline
+	\caius & 3 & 3 \\ \hline
+	\srutitwo & 4 & 4 \\ \hline
+	\david & 5 & 5 \\ \hline
+	\cpg & 6 & 6 \\ \hline
+\end{tabular}
+\end{table}
+
 Our semi-structured interviews took place in person in a conference room at an engineering center. The exception was \cpg, who was interviewed at their place of work. Interviews lasted an average of 30 minutes, with a minimum of 8 minutes. All interviews were audio recorded with permission from participants.  Interviews began with demographic questions: participant development experience, and experience with continuous integration. We also asked a thematic question:
 
 \smallskip
@@ -273,26 +286,36 @@ For the rest of the interview, participants referred back to that experience wit
 After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in Table \ref{table:codeset}. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned EDS twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
 
 \section{Results}
-\begin{table}
-	\centering
-	\caption{Code Results}
-	\label{table:coderesults}
-	\begin{tabular}{ | p{.25\columnwidth} | l | l | l | l | l | l | l | }
-		\hline
-		& P1 & P2 & P3 & P4 & P5 & P6 & Total \\ \hline
-		EDS & 4 & 12 & 12 & 14 & 12 & 8 & 72 \\ \hline
-		SHOE & 3 & 5 & 10 & 10 & 19 & 2 & 59 \\ \hline
-		EVID & 0 & 6 & 11 & 17 & 13 & 11 & 67 \\ \hline
-		SCHM & 4 & 15 & 17 & 13 & 22 & 18 & 90 \\ \hline
-		HYPO & 2 & 0 & 2 & 4 & 7 & 7 & 27 \\ \hline
-		PRES & 0 & 0 & 0 & 0 & 1 & 4 & 5 \\ \hline
-		NULL & 8 & 20 & 26 & 30 & 41 & 37 & 255 \\ \hline
-		Total per Participant & 21 & 58 & 78 & 88 & 115 & 87 &  \\ \hline
-	\end{tabular}
-\end{table}
+
 \subsection{RQ1:  Does Pirolli's Sensemaking Model apply to Continuous Integration?}
+\begin{figure*}
+\centering
+\frame{\includegraphics[height=9cm, width=0.6\textwidth]{sensemaking_model}}
+\caption{A sample black and white graphic
+that has been resized with the \texttt{includegraphics} command.}
+\end{figure*}
+
+To answer this question, we coded participant interviews as described in the Methodology (Section \ref{method}).
+
 \subsection{RQ2: Does Continuous Integration alter the programmer's sensemaking behavior?}
 To answer this question, we coded participant interviews as described in methodology. Table \ref{table:coderesults} details our results. 
+\begin{table}
+\centering
+\caption{Code Results}
+\label{table:coderesults}
+\begin{tabular}{ | >{\centering\arraybackslash}p{.25\columnwidth} | m{0.4cm} | l | l | l | l | l | l | }
+	\hline
+	\rowcolor{black!20!}Code & P1 & P2 & P3 & P4 & P5 & P6 & Total \\ \hline
+	EDS & 4 & 12 & 12 & 14 & 12 & 8 & 72 \\ \hline
+	SHOE & 3 & 5 & 10 & 10 & 19 & 2 & 59 \\ \hline
+	EVID & 0 & 6 & 11 & 17 & 13 & 11 & 67 \\ \hline
+	SCHM & 4 & 15 & 17 & 13 & 22 & 18 & 90 \\ \hline
+	HYPO & 2 & 0 & 2 & 4 & 7 & 7 & 27 \\ \hline
+	PRES & 0 & 0 & 0 & 0 & 1 & 4 & 5 \\ \hline
+	NULL & 8 & 20 & 26 & 30 & 41 & 37 & 255 \\ \hline
+	\rowcolor{black!20!}Total codes \mbox{per participant} & 21 & 58 & 78 & 88 & 115 & 87 &  \\ \hline
+\end{tabular}
+\end{table}
 
 We found that participants didn't refer to hypotheses and presentation nearly as much as they referred to external data sources, shoeboxing, evidence files, and schema. We interpret this result to mean that participants spend less time hypothesizing about their project or thinking about presentation because of continuous integration. The tools that continuous integration uses influenced the way that participants described their work.
 
@@ -312,7 +335,6 @@ If, however, the participant referred to an action relating to the artifact, we 
 "Every time I commit."	
 \end{quote}
 
-
 We found that when talking about external data sources  or their shoebox, participants were talking about things that \textit{they} did (e.g., committing, changing code). This indicated to us that the participants felt that they had to make sense of the development cycle when they were doing these tasks. 
 
 However, we found that when referring to schemas and evidence files, participants were referring to things the CI tool did for them (e.g.,Integration testing, build reports, dashboards, etc.
@@ -331,7 +353,7 @@ This smaller release cycle allowed participants to skip or reduce the amount of 
 \subsection{Threats to Validity}
 Our study has some threats to validity that need to be addressed. First is our sample size: we only had 6 participants, and they may not be representative of continuous integration users in general. Beyond that, our participants may have had recollection bias: it's possible that during the interview, participants were more likely to recall information that had to do with their day-to-day work, such as programming, and less likely to remember their hypotheses and final product. This could influence the proportion of codes we found in the interviews. Finally, participants may have exhibited bias for or against continuous integration based on factors outside their sensemaking process, such as work environment or project workload.
 \subsection{Future Work}
-There is little literature being published about continuous integration and its effects on the development cycle. Future work could flesh out our modified model of sensemaking by performing observational studies on people interacting with continuous integration tools. 
+As previously indicated, there is a lack of literature focusing on the role of continuous integration within models of cognition and understanding as it relates to software development. Future work could further analyze the role continuous integration has on our modified model of sensemaking by performing observational studies on people interacting with continuous integration tools. 
 
 Further work could also be done by applying Information Foraging Theory to try to understand the effects of continuous integration tools on developers' foraging habits. 
 
