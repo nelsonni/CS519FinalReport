@@ -136,12 +136,12 @@ Charles Hill\\
 % number that will appear in the \additionalauthors section.
 
 % shortcut macros for Study Participants
-\newcommand{\michael}{P1 }
-\newcommand{\sruti}{P2 }
+\newcommand{\michael}{P1}
+\newcommand{\sruti}{P2}
 \newcommand{\caius}{P3 }
-\newcommand{\srutitwo}{P4 }
-\newcommand{\david}{P5 }
-\newcommand{\cpg}{P6 }
+\newcommand{\srutitwo}{P4}
+\newcommand{\david}{P5}
+\newcommand{\cpg}{P6}
 
 \maketitle
 \begin{abstract}
@@ -152,7 +152,7 @@ Continuous integration is gaining traction as part of the push for agile softwar
 This gap in understanding makes it difficult to assess the effectiviness of tools and techniques developed to augment and assist developers using continuous integration. Without thorough understanding of the underlying usage patterns and goals, any improvements to the tools could be to the detriment of developers using them.
 
 %%%%Here's what we did
- In this paper, we interview 6 professional developers and examine the ways in which they adhere to current sensemaking models when using continuous integration in the context of software development. We observe that continuous integration alters the locale of responsibility for certain portions of the Software Development Life Cycle (SDLC)\cite{singh:lifecycle}, including Testing, Deployment, and Maintenance. We also present a modification to Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking}, which reflects the altered approach to sensemaking that occurs when using continuous integration in a software development context.
+ In this paper, we interview professional developers and examine the ways in which they adhere to current sensemaking models when using continuous integration in the context of software development. We observe that continuous integration alters the locale of responsibility for certain portions of the Software Development Life Cycle, including Testing, Deployment, and Maintenance. We also present a modification to Pirolli and Card's \textit{Notional Model of Sensemaking}, which reflects the altered approach to sensemaking that occurs when using continuous integration in a software development context.
 \smallskip
 
 \begin{CCSXML}
@@ -251,49 +251,49 @@ D. St{\aa}hl and J. Bosch\cite{staahl:modelingdiffs} focus on the inputs, output
 \begin{tabular}[b]{ | l | l | p{5.5cm} | p{6.5cm} | }
 	\hline
 	\rowcolor{black!20!} Code & Code Name & Description & Rules / Examples \\ \hline
-	EDS & External Data Sources & Raw evidence in mostly standard consumable formats (text). & Existing external artifacts associated with software development (i.e. source code, test suites, databases, raw data, servers, etc.) \\ \hline
-	SHOE & Shoebox & Much smaller subset of that external data that is relevant for processing. & Modifications to source code or testing artifacts (i.e. commits, changesets, updates) \\ \hline
-	EVID & Evidence File & Snippets extracted from items in the shoebox. & Integration, compilation, and building actions related to modification and changes \\ \hline
-	SCHM & Schema & Re-representation or organized marshalling of the information so that it can be used more easily to draw conclusions. & Results of integration, compilation, building, and updating (i.e. build reports, metrics, status dashboards, etc.) \\ \hline
-	HYPO & Hypothesis & Tentative representation of those conclusions with supporting arguments. & Assumptions regarding integration, compilation, and builds, or conclusions drawn from the results of such actions \\ \hline
-	PRES & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
+	\texttt{EDS} & External Data Sources & Raw evidence in mostly standard consumable formats (text). & Existing external artifacts associated with software development (i.e. source code, test suites, databases, raw data, servers, etc.) \\ \hline
+	\texttt{SHOE} & Shoebox & Much smaller subset of that external data that is relevant for processing. & Modifications to source code or testing artifacts (i.e. commits, changesets, updates) \\ \hline
+	\texttt{EVID} & Evidence File & Snippets extracted from items in the shoebox. & Integration, compilation, and building actions related to modification and changes \\ \hline
+	\texttt{SCHM} & Schema & Re-representation or organized marshalling of the information so that it can be used more easily to draw conclusions. & Results of integration, compilation, building, and updating (i.e. build reports, metrics, status dashboards, etc.) \\ \hline
+	\texttt{HYPO} & Hypothesis & Tentative representation of those conclusions with supporting arguments. & Assumptions regarding integration, compilation, and builds, or conclusions drawn from the results of such actions \\ \hline
+	\texttt{PRES} & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
 \end{tabular}
 \end{table*}
 
 To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant.
 
-We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table \ref{table:participant}. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
+We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table \ref{table:participant}. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was 6.6 years, with a maximum of 11 years. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 
 \begin{table}
 \centering
 \label{table:participant}
 \caption{Participant Information}
 \begin{tabular}{ | >{\centering\arraybackslash}p{.25\columnwidth} | >{\centering\arraybackslash}p{.25\columnwidth} | >{\centering\arraybackslash}p{.25\columnwidth} | }\hline
-	\rowcolor{black!20!}Participant number & Development experience & Continuous Integration Experience \\ \hline
-	\michael & 1 & 1 \\ \hline
-	\sruti & 2 & 2 \\ \hline
-	\caius & 3 & 3 \\ \hline
-	\srutitwo & 4 & 4 \\ \hline
-	\david & 5 & 5 \\ \hline
-	\cpg & 6 & 6 \\ \hline
+	\rowcolor{black!20!}Participant Number & Development Experience & Continuous Integration Experience \\ \hline
+	\michael & 10 years & 1 year \\ \hline
+	\sruti & 5 years & 3 years \\ \hline
+	\caius & 4 years & 1.5 years \\ \hline
+	\srutitwo & 5 years & 3 years \\ \hline
+	\david & 5 years & 3.5 years \\ \hline
+	\cpg & 11 years & 6 years \\ \hline
 \end{tabular}
 \end{table}
 
 Our semi-structured interviews took place in person in a conference room at an engineering center. The exception was \cpg, who was interviewed at their place of work. Interviews lasted an average of 30 minutes, with a minimum of 8 minutes. All interviews were audio recorded with permission from participants.  Interviews began with demographic questions: participant development experience, and experience with continuous integration. We also asked a thematic question:
 
 \smallskip
-\textit{"Tell me about the last time you used continuous integration"}
-
+\textit{``Tell me about the last time you used continuous integration''}
+\smallskip
 
 For the rest of the interview, participants referred back to that experience with continuous integration. Here are some sample questions we used to get information about participants' sensemaking behavior:
 \begin{itemize}  
-	\item What tasks prompt you to interact with your current CI tools?
-	\item What outside information do you use to evaluate the information provided by your CI solution?
-	\item What types of information from your CI solution do you find relevant to you? 
+	\item \textit{What tasks prompt you to interact with your current CI tools?}
+	\item \textit{What outside information do you use to evaluate the information provided by your CI solution?}
+	\item \textit{What types of information from your CI solution do you find relevant to you?}
 \end{itemize}
 
 \subsection{Analysis}
-After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in Table \ref{table:codeset}. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned EDS twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
+After transcribing the interviews, we analyzed them by using a code set based on Pirolli and Card's sensemaking model \cite{pirolli:sensemaking}. We operationalized the steps in the sensemaking model as described in Table \ref{table:codeset}. Participant transcripts were analyzed at the sentence level. We limited codes to one count of each code per sentence; if a sentence mentioned \texttt{EDS} twice, for example, only one instance was coded. Multiple code types were allowed for each sentence. We coded 20.37\% of participant data and reached 80.8\% agreement, measured using the Jaccard index. After that, participant data was coded independently.
 
 \section{Results}
 
@@ -302,11 +302,25 @@ After transcribing the interviews, we analyzed them by using a code set based on
 \centering
 \frame{\includegraphics[height=9cm, width=0.6\textwidth]{sensemaking_model}}
 \caption{A sample black and white graphic
-that has been resized with the \texttt{includegraphics} command.}
+that has been resized with the \texttt{includegraphics} command.} \label{figure:sensemaking_model}
 \end{figure*}
 
-To answer this question, we coded participant interviews as described in the Methodology (Section \ref{method}).
+To answer this question, we coded participant interviews as described in the Methodology (Section \ref{method}). Table \ref{table:coderesults} details our results. Developers are routinely tasked with observing, evaluating, hypothesizing, and drawing conclusions about software artifacts either developed by them, developed by past or current team members, or by systems built to assist in facilitating the software development process. Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking} models similar steps in describing the process of sensemaking within an intelligence analyst role.
 
+Using this similarity, and observing that software development tasks utilizing continuous integration share similar transitionary states and goals with intelligence analyst, we were able to operationalize a modified model of sensemaking that follows from the results of our interviews and maps to the use of continuous integration within the professional software developer community.
+
+We observed the following mappings between the Software Development Life Cycle (SDLC)\cite{singh:lifecycle} and the operationalized codeset of Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking} found in Table \ref{table:codeset}:
+
+\begin{itemize}  
+	\item \textit{Requirements Analysis} (SDLC) follows from the selection of subsets from \textit{External Data Sources} to \textit{Shoebox}.
+	\item \textit{Design} (SDLC) follows from both the micro-architectural steps taken when developing code during hte \textit{Shoebox} phase and the macro-architectural steps that occur when developing overarching designs in the \textit{Hypotheses} phase as a reaction to the state of the software (e.g. successfully or unsuccessfully compiling).
+	\item \textit{Development} (SDLC) follows squarely into the realm of commits and code changes that encapsulate the \textit{Shoebox}.
+	\item \textit{Testing} (SDLC) occurs when moving from \textit{Evidence File} to \textit{Schema} and includes the evaluation and examination of previously held hypotheses.
+	\item \textit{Deployment} (SDLC) is the action that directly results from the \textit{Presentation}, but is based upon the success of the \textit{Hypotheses} and the state of the \textit{Schemas} that are the current focus.
+	\item \textit{Maintenance} (SDLC) follows from \textit{Hypotheses} that are drawn from \textit{Schemas} and used to further the state of the overall system, and thus can be considered the actualization of the sub-loop shown in Figure \ref{figure:sensemaking_model}.
+\end{itemize}
+
+These observations and constraints allow us to conclude that Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking} can be applied to the use of continuous integration in the context of professional software developers working on developing software either in a traditional software development model or an agile development model.
 
 \subsection{RQ2: Does Continuous Integration alter the programmer's sensemaking behavior?}
 \begin{table}
@@ -316,62 +330,61 @@ To answer this question, we coded participant interviews as described in the Met
 	\begin{tabular}{ | >{\centering\arraybackslash}p{.25\columnwidth} | m{0.4cm} | l | l | l | l | l | l | }
 		\hline
 		\rowcolor{black!20!}Code & P1 & P2 & P3 & P4 & P5 & P6 & Total \\ \hline
-		EDS & 4 & 12 & 12 & 14 & 12 & 8 & 72 \\ \hline
-		SHOE & 3 & 5 & 10 & 10 & 19 & 2 & 59 \\ \hline
-		EVID & 0 & 6 & 11 & 17 & 13 & 11 & 67 \\ \hline
-		SCHM & 4 & 15 & 17 & 13 & 22 & 18 & 90 \\ \hline
-		HYPO & 2 & 0 & 2 & 4 & 7 & 7 & 27 \\ \hline
-		PRES & 0 & 0 & 0 & 0 & 1 & 4 & 5 \\ \hline
-		NULL & 8 & 20 & 26 & 30 & 41 & 37 & 255 \\ \hline
+		\texttt{EDS} & 4 & 12 & 12 & 14 & 12 & 8 & 72 \\ \hline
+		\texttt{SHOE} & 3 & 5 & 10 & 10 & 19 & 2 & 59 \\ \hline
+		\texttt{EVID} & 0 & 6 & 11 & 17 & 13 & 11 & 67 \\ \hline
+		\texttt{SCHM} & 4 & 15 & 17 & 13 & 22 & 18 & 90 \\ \hline
+		\texttt{HYPO} & 2 & 0 & 2 & 4 & 7 & 7 & 27 \\ \hline
+		\texttt{PRES} & 0 & 0 & 0 & 0 & 1 & 4 & 5 \\ \hline
+		\texttt{NULL} & 8 & 20 & 26 & 30 & 41 & 37 & 255 \\ \hline
 		\rowcolor{black!20!}Total codes \mbox{per participant} & 21 & 58 & 78 & 88 & 115 & 87 &  \\ \hline
 	\end{tabular}
 \end{table}
-Our last research question is about the programmer's frame of reference when sensemaking. To answer this question, we coded participant interviews as described in methodology. Table \ref{table:coderesults} details our results.  According to Pirolli's model, sensemaking occurs at all of the levels of the sensemaking chart. We want to understand whether or not participants framed their sensemaking as something \textit{they} were doing, or if they found that their continuous integration solution helped them perform their sensemaking.
+Our second research question is about the programmer's frame of reference when sensemaking. According to Pirolli's model\cite{pirolli:sensemaking}, sensemaking occurs at all of the levels of the sensemaking chart. We want to understand whether or not participants framed their sensemaking as something \textit{they} were doing, or if they found that their continuous integration solution helped them perform their sensemaking.
 
 We found that participants didn't refer to hypotheses and presentation nearly as much as they referred to external data sources, shoeboxing, evidence files, and schema. We interpret this result to mean that participants spend less time hypothesizing about their project or thinking about presentation because of continuous integration. The tools that continuous integration uses influenced the way that participants described their work.
 
-When participants responded to questions, they often referred to the project they were working on. When coding, if participants referred to an artifact of the project, we called that an external data source. For instance, \srutitwo  said of commit messages: 
+When participants responded to questions, they often referred to the project they were working on. When coding, if participants referred to an artifact of the project, we called that an external data source. For instance, \srutitwo\ said of commit messages: 
 
 \begin{quote}
-"The commit messages have been  useful."
+\textit{``The commit messages have been  useful.''}
 \end{quote}
 
 
-If, however, the participant referred to an action relating to the artifact, we coded that as shoeboxing. For instance, when asked when she interacted with the continuous integration solution, \srutitwo responded: 
+If, however, the participant referred to an action relating to the artifact, we coded that as shoeboxing. For instance, when asked when she interacted with the continuous integration solution, \srutitwo\ responded: 
 
 \begin{quote}
-"Every time I commit."	
+\textit{``Every time I commit.''}	
 \end{quote}
 
-We found that when talking about external data sources  or their shoebox, participants were talking about things that \textit{they} did (e.g., committing, changing code). This indicated to us that the participants felt that they had to make sense of the development cycle when they were doing these tasks. 
+We found that when talking about external data sources  or their shoebox, participants were talking about things that \textit{they} did (e.g. committing, changing code). This indicated to us that the participants felt that they had to make sense of the development cycle when they were doing these tasks. 
 
-However, we found that when referring to schemas and evidence files, participants were referring to things the CI tool did for them (e.g.,Integration testing, build reports, dashboards, etc.
-) 
+However, we found that when referring to \textit{schemas} and \textit{evidence files}, participants were referring to things the CI tool did for them (e.g. integration testing, build reports, dashboards, etc.). 
 
-From these observations, we speculate that participants limited their frame of reference while sensemaking to everyday development activities, e.g. coding. This might be because the continuous integration cycle focuses on small, rapid releases rather than larger, feature-based releases. for instance, \cpg stated:
+From these observations, we speculate that participants limited their frame of reference while sensemaking to everyday development activities, e.g. coding. This might be because the continuous integration cycle focuses on small, rapid releases rather than larger, feature-based releases. for instance, \cpg\ stated:
 
 \begin{quote}
-"There's really no huge formal 'we're doing a release.' We are releasing every single day. Sometimes little things, sometimes big things."	
+\textit{``There's really no huge formal 'we're doing a release.' We are releasing every single day. Sometimes little things, sometimes big things.''}
 \end{quote}
 
 
-This smaller release cycle allowed participants to skip or reduce the amount of time they spent in the sensemaking steps of evidence file and schema. 
+This smaller release cycle allowed participants to skip or reduce the amount of time they spent in the sensemaking steps of \textit{Evidence File} and \textit{Schema}. 
 
 \subsection{RQ3: Does the use of continuous integration aid developers in making sense of their software development cycles?}
 We've presented evidence that continuous integration changes the way that developers make sense of their software development cycle. but the question remains: are these changes good or bad? If continuous integration is helping developers make sense of their projects, we need to be able to identify and capitalize on its strengths.
 We found that continuous integration helped participants understand their projects. \srutitwo pointed out that having continuous integration reports helped the development team understand what has changed in a project:
 \begin{quote}
-	Sometimes we just like looking at those reports \ldots it tells a lot about what has been happening  in a project.  
+	\textit{``Sometimes we just like looking at those reports \ldots it tells a lot about what has been happening  in a project.''} 
 \end{quote}
 \caius noted that the continuous integration tools helped them understand what caused problems in their build:
 \begin{quote}
-	\caius: But it's just that if I screw something up, I find it earlier and it [the CI tool] gives me more to look at.
+	\caius: \textit{``But it's just that if I screw something up, I find it earlier and it [the CI tool] gives me more to look at.''}
 	
-	\caius: In [CI tool], ... the emails that comes would give me more information. ... I could just look at the email and see "well, this test failed." It would just make my life easy, because then I don't have to go hunt for ... the cause
+	\caius: \textit{``In [CI tool], ... the emails that comes would give me more information. ... I could just look at the email and see "well, this test failed." It would just make my life easy, because then I don't have to go hunt for ... the cause''}
 \end{quote}
-\david mentioned that understanding the overall project was easier with continuous integration tools:
+\david\ mentioned that understanding the overall project was easier with continuous integration tools:
 \begin{quote}
-	\david: it gave me a chance to understand how different modules within the project would interact with one another, and verify that my understanding was good
+	\david: \textit{``it gave me a chance to understand how different modules within the project would interact with one another, and verify that my understanding was good''}
 \end{quote}
 
 Participants made sense of their projects in several ways through the use of continuous integration. It helped them understand key aspects of their projects and make sense of the problems that occurred during development. 
@@ -388,13 +401,15 @@ Finally, while our work explores how continuous integration affects sensemaking,
 This study is the first that considers continuous integration through the lens of sensemaking. We interviewed 6 software developers about their experience with continuous integration. Results indicate that there are key elements of the sensemaking process that continuous integration affects. Our key results were:
 \begin{itemize}  
 	\item \textit{Modifying Pirolli and Card's notional model of sensemaking:} We found some differences in the way that developers make sense of the development cycle when using continuous integration. This prompted us to modify Pirolli and Card's model to fit our participants' experiences.
-	\item \textit{Continuous Integration tools change participant behavior during sensemaking:} Participants referred to their hypotheses and presentation steps of sensemaking much less often than they referred to external data sources, shoebox, evidence file, and schema. We thing that continuous integration tools cause participants to spend less time hypothesizing about and presenting their work. 
-	\item \textit{An altered frame of reference:} Continuous integration tools seemed to take over part of participants' sensemaking process, specifically by providing them evidence files and schemas by which to refer to their development projects.
+	\item \textit{Continuous Integration tools change participant behavior during sensemaking:} Participants referred to their hypotheses and presentation steps through a sub-loop that hooks into the shoebox and evidence files steps more often then returning to the schema or previously held evidence file. We think that continuous integration tools cause participants to spend less time hypothesizing about and presenting their work. 
+	\item \textit{Sensemaking applies to continuous integration within software development life cycles:} Continuous integration directly applies to specific portions of the Software Development Life Cycle. Pirolli and Card's \textit{Notional Model of Sensemaking} can also be mapped to the Software Development Life Cycle. Thus, conclusions and theories can be conceptualized between the use of new software development models and mental models associated with cognition and understanding.
 \end{itemize}
 
 %ACKNOWLEDGMENTS are optional
 \section{Acknowledgments}
+This research was supported by a grant from the National Science Foundation (NSF), Oregon State University, and the CS519: Sensemaking in Software Engineering course.
 
+The authors would also like thank the following for their contributions to this work: Anita Sarma, Michael Hilton, David Piorkowski, Sruti Srinivasa Ragavan, Caius Brindescu, Shane McKee, and students in the CS519 course at Oregon State University. We hope to see everyone around campus next term.
 %
 % The following two commands are all you need in the
 % initial runs of your .tex file to
