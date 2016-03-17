@@ -147,13 +147,12 @@ Charles Hill\\
 \begin{abstract}
 \end{abstract}
 %%%%The problem
-Continuous integration is gaining traction as part of the software development lifecycle, but little work has been done to understand how its use affects developers.
+Continuous integration is gaining traction as part of the push for agile software development, but little work has been done to understand the impact on developers' sensemaking processes.
 %%%%Why it matters
-This is a problem if we want to be able to support developers in their use of continuous integration: if we don't understand how people use it, we can't improve it.
+This gap in understanding makes it difficult to assess the effectiviness of tools and techniques developed to augment and assist developers using continuous integration. Without thorough understanding of the underlying usage patterns and goals, any improvements to the tools could be to the detriment of developers using them.
+
 %%%%Here's what we did
- In this paper, we investigate the way developers make sense of their continuous integration system results in the context of their development cycle. To find out how software developers make sense of their continuous integration tool and its output, we interviewed professionals about their experiences with continuous integration.
-%%%%Here's how it'll change the world :O
-We present modifications to the sensemaking model that better reflect developers' use of continuous integration.
+ In this paper, we interview 6 professional developers and examine the ways in which they adhere to current sensemaking models when using continuous integration in the context of software development. We observe that continuous integration alters the locale of responsibility for certain portions of the Software Development Life Cycle (SDLC)\cite{singh:lifecycle}, including Testing, Deployment, and Maintenance. We also present a modification to Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking}, which reflects the altered approach to sensemaking that occurs when using continuous integration in a software development context.
 \smallskip
 
 \begin{CCSXML}
@@ -187,41 +186,63 @@ We present modifications to the sensemaking model that better reflect developers
 \keywords{Continuous Integration; Sensemaking; Human-Computer Interactions; Software Engineering}
 
 \section{Introduction}
-Agile development models have replaced traditional development models (such as Waterfall Method) in a significant portion of the professional software development industry. Continuous integration is an optional part of agile development, currently practiced by many large companies such as Facebook, Google, Netflix, and LinkedIn.
+Agile development models have replaced traditional development models in a significant portion of the professional software development industry. Software development companies are integrating these models in order to gain flexibility, speed, and quality, and reduce time, complexity, and errors in their software products. Continuous integration, as a common element of agile development, is being included in these strageties as companies look to streamline their processes across the Software Development Life Cycle.\cite{singh:lifecycle} Continuous integration is currently in practice at major companies such as Facebook, Google, Netflix, and LinkedIn.
 
 Continous Integration describes a set of software engineering practices that speed up the delivery of software by automating the integration and build steps of the software development cycle. It emerged in the Extreme Programming (XP) community, with Kent Beck and Ron Jeffries writing about agile development models and continuous integration while on the Chrysler Comprehensive Compensation System project in 1998\cite{beck:extreme_programming}\cite{beck:agile_manifesto}.
 
 Martin Fowler further described the concept of continuous integration in 2006, by defining \textit{continuous integration} as:
 \begin{quote}
-Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily -- leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.\cite{fowler:continuous}
+``Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily -- leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly.''\cite{fowler:continuous}
 \end{quote}
 
 Little research has been done, though, to understand its effect on developers. In order to have an informed discussion about the actualized benefits and realized detriments inherent to continuous integration, we must first understanding the motivations, methods, and usage associated with it.
 
 Previous studies on continuous integration have focused on the operational and integrational aspects of using continuous integration as part of an agile software development process\cite{miller:hundreddays}\cite{olsson:climbingstairway}, use within open source projects\cite{deshpande:ci_opensource}, or as a foil for comparison between traditional and agile development models\cite{staahl:modelingdiffs}. There are no studies that examine the effects continuous integration has on sensemaking and comprehension for software development tasks.
 
-In this paper we attempt to evaluate whether Peter Pirolli and Stuart Card's \textit{notional model of sensemaking}\cite{pirolli:sensemaking} can be applied to the use of continuous integration, whether the use of continuous integration in software development alters the previously observed model, and whether the use of continuous integration achieves the goals that professional software developers strive for when integrating continuous integration into their development processes.
+In this paper we attempt to evaluate whether Peter Pirolli and Stuart Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking} can be applied to the use of continuous integration, whether the use of continuous integration in software development alters the previously observed model, and whether the use of continuous integration achieves the goals that professional software developers strive for when integrating continuous integration into their development processes.
 
 Development tools are only helpful when used by software developers, therefore the adoption of these tools is critical for their success. Tool developers must understand the needs and usage patterns of their users
 
 Learning how developers' comprehend and evaluate their software development processes when continuous integration tools and processes are employed will allow tool designers to better target perspective users.
 
-This study is an attempt to learn more about software developers' sensemaking associated with continuous integration. To that end, we look for answers to the following research questions:
+This study is an attempt to learn more about software developers' sensemaking processes and their association with continuous integration. To that end, we look for answers to the following research questions:
 \begin{itemize}
-\item RQ1: Does Pirolli's Sensemaking Model apply to Continuous Integration?
-\item RQ2: Does Continuous Integration alter programmers' sensemaking behavior?
-\item RQ3: Does the use of continuous integration aid developers in making sense of their software development cycles?
+\item \textbf{RQ1:} Does Pirolli and Card's Sensemaking Model apply to Continuous Integration?
+\item \textbf{RQ2:} Does Continuous Integration alter programmers' sensemaking behavior?
+\item \textbf{RQ3:} Does the use of continuous integration aid developers in making sense of their software development cycles?
 
 \end{itemize}
 %%%%%%
 
 \section{Background and Related Work}
 
-the usage of continuous integration has primarily focused upon the operational aspects of continuous integration as it relates to software development processes \cite{miller:hundreddays}\cite{olsson:climbingstairway}.
+\subsection{Background}
+
+The Software Development Life Cycle consists of six steps: \textit{Requirements Analysis}, \textit{Design}, \textit{Development}, \textit{Testing}, \textit{Deployment}, and \textit{Maintenance}. Continuous integration specifically alters the \textit{Testing}, \textit{Deployment} and \textit{Maintenance} phases. According to the ISO/IEC 12207 standard\cite{singh:lifecycle}, once requirements have been gathered, analyzed, and a technical design has been determined, the development and testing phases will begin to be the primary focus of a software development project.
+
+The \textit{Testing} phase occurs once the application is migrate to a test environment where different types of testing will be performed, including integration and system testing. These tests typically check for errors, bugs, and interoperability issues. Continuous integration tools allow tests suites to be augmented with different target environments and automatically verified for interoperability without the need for developers to manually conduct such tests.
+
+The \textit{Deployment} phase is considered the final stage of initial development, and is where software is put into production use. Continuous integration, especially when part of a solution that included continuous deployment, allows new or updated software to quickly be packaged for deployment without requiring direct input from developers. This packaging can include multiple versions that are targeted at different platforms, and is a target for significant time and cost savings.
+
+The \textit{Maintenance} phase is required to continually operate software at peak performance levels. During this phase, the system and software is assessed to ensure that it does not become obsolete, software patches are generated to add functionality, fix bugs or resolve potential security issues. Continuous integration offers the ability to quickly test, validate, and package these patches for deployment without requiring direct input from developers.
+
+The use of continuous integration offloads certain aspects of the Software Development Life Cycle that would typically be conducted by human developers, and instead tasks machines and software with their execution. Since the locale of responsibility for these actions are removed from the developer, their sensemaking models are also subsequently altered.
+
+For our work, we used Pirolli and Card's \textit{Notional Model of Sensemaking}\cite{pirolli:sensemaking} as the basis of our analysis into the sensemaking model that developers use during the Software Development Life Cycle. This model was derived from observations conducted using intelligence analysts, considered experts for the purposes of their study, and focused upon the intrinsic steps conducted when searching, evaluating, and deriving conclusions from information within the analyst's field of inquiry. These types of tasks, the expert behavior of analysts, and the nature of their sensemaking provide parallels to our target group which we used to build our study. Professional software developers can be considered to use expert behavior in their programming tasks, which also require searching, evaluating, and deriving conclusions when designing, developing, testing, and deploying software.
+
+\subsection{Related Work}
+
+Prior work on continuous integration has focused on the operational and integrational aspects of using continuous integration.
+
+A. Miller\cite{miller:hundreddays} provided an experiental case study of using continuous integration. He provided analysis about the effectiviness of using continuous integration from the perspective of a system administrator that is tasked with building and deploying a Continuous Integration (CI) server within a distributed software development team environment. This contrasts with our work to understand the usage of continuous integration by developers after a Continuous Integration (CI) server or service has been deployed, and without regard to the maintenance of such a system.
+
+H. H. Olsson, et al.\cite{olsson:climbingstairway} conducted case studies on the steps, barriers, and experiences of software development teams migrating from traditional development models to agile development models. They provided a stepped transition model that included continuous integration as an individual step along the path to employing a full agile development model. For the purposes of their study, continuous integration was another step in a larger context of process migration, and examined from the perspective of business and operations managers. We focus upon the developer and their experiences when using continuous integration tools and methods, and not in regards to transitioning across a spectrum of agile methods.
+
+A. Deshpande and D. Riehle\cite{deshpande:ci_opensource} analyzed fine-grained data from code repositories in order to understand the impact of continuous integration within the open source community. In contrast to our work, they focus on whether the use of continuous integration alters how and when developers contribute code to open source projects. We look at the effects continuous integration has upon patterns associated with information seeking, evaluation, and understanding. Our work attempts to explain how continuous integration can effect the steps taken to develop software, irregardless of the effects to developer communities.
+
+D. St{\aa}hl and J. Bosch\cite{staahl:modelingdiffs} focus on the inputs, outputs, and dependency implications of continuous integration use in comparisons across industries and contextual applications of agile development models. Again, this work focuses on continuous integration at the team and business level, with particular attention paid to the implementation and integration of new operational models. Our work looks at the internal scope of individual developers working with already deployed continuous integration tools and services.
 
 \section{Methodology} \label{method}
-
-To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant. \\
 
 \begin{table*}
 \label{table:codeset}
@@ -238,6 +259,8 @@ To answer our research questions, we conducted semi-structured interviews, where
 	PRES & Presentation & The final work product which is suited for communication. & Final software product, successfully build product, or deployment to customers \\ \hline
 \end{tabular}
 \end{table*}
+
+To answer our research questions, we conducted semi-structured interviews, wherein we asked a list of pre-set questions and inquired further with follow-up questions to learn more about each participant.
 
 We interviewed 6 participants, each of whom had at least three years software development experience. Participant information is detailed in table \ref{table:participant}. Participant roles in the software development process varied. For instance, one participant (\cpg) was a founding member of a startup who managed the development team, while another participant (\david) worked for an international software company. The average experience level with software development was **x years, with a maximum of **x. All participants were required to have at least some experience with continuous integration; no minimum level was required.
 
@@ -274,7 +297,7 @@ After transcribing the interviews, we analyzed them by using a code set based on
 
 \section{Results}
 
-\subsection{RQ1:  Does Pirolli's Sensemaking Model apply to Continuous Integration?}
+\subsection{RQ1:  Does Pirolli and Card's Sensemaking Model apply to Continuous Integration?}
 \begin{figure*}
 \centering
 \frame{\includegraphics[height=9cm, width=0.6\textwidth]{sensemaking_model}}
